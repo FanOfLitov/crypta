@@ -1,0 +1,34 @@
+----------Шифрование файла
+
+java -jar CryptoCLI.jar encrypt-file -i путь/к/файлу.txt -o путь/к/выходу.crypt -p "пароль"
+
+Пример:
+
+java -jar CryptoCLI.jar encrypt-file -i sample.txt -o encrypted.dat -p "mysecret"
+
+    По умолчанию используется алгоритм CUSTOM. Если хочешь указать другой:
+
+--algorithm KUZNECHIK
+--algorithm RSA
+
+--------------Расшифровка файла
+
+java -jar CryptoCLI.jar decrypt-file -i путь/к/файлу.crypt -o путь/к/дешифрованному.txt -p "тот_же_пароль"
+
+Пример:
+
+java -jar CryptoCLI.jar decrypt-file -i encrypted.dat -o decrypted.txt -p "mysecret"
+
+--------- Шифрование каталога
+
+java -jar CryptoCLI.jar encrypt-dir -i входная_папка -o выходная_папка -p "пароль"
+
+----- Расшифровка каталога
+
+java -jar CryptoCLI.jar decrypt-dir -i зашифрованная_папка -o куда_сохранить -p "пароль"
+
+---------- Дополнительно
+Опция	        Назначение
+--algorithm	CUSTOM, KUZNECHIK, RSA
+--verbose	Показ логов работы в консоли
+--help	Показать справку по команде
